@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Study Bakery</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="manifest" href="manifest.json">
+</head>
+
+<body>
+<!-- ☰ MENU BUTTON -->
+
+<!-- OVERLAY -->
+<div class="overlay" id="overlay"></div>
+
+<!-- SIDEBAR -->
+<div class="sidebar" id="sidebar">
+  <h2>🌸 Menu</h2>
+
+  <ul>
+    <li onclick="goTo('index.html')">🏠 Home</li>
+  <li onclick="goTo('dashboard.html')">📊 Dashboard</li>
+  <li onclick="goTo('account.html')">👤 Account</li>
+  </ul>
+</div>
+
+<div class="app">
+
+  <!-- TOP BAR -->
+ <div class="topbar drag-area">
+
+  <!-- LEFT -->
+  <div class="left-section no-drag">
+    <span class="menu-btn" id="menuBtn">☰</span>
+  </div>
+
+  <!-- CENTER -->
+  <div id="dateDisplay" class="date"></div>
+
+  <!-- RIGHT -->
+  <div class="right-section no-drag">
+    <span id="musicBtn" class="music-btn">🎵</span>
+    <button id="muteBtn" class="mute-btn">🔇</button>    
+  </div>
+
+</div>
+
+  <!-- MAIN GRID -->
+  <div class="layout">
+
+    <!-- LEFT -->
+    <div class="panel left">
+      <div class="card">
+        <div class="icon">⭐</div>
+        <h3>Today's Goal</h3>
+        <p id="goalText">0 / 2</p>
+        <div class="dots" id="goalDots"></div>
+      </div>
+
+      <div class="card">
+        <div class="icon" id="streakFire">🔥</div>
+        <h3>Streak</h3>
+        <div class="big">0</div>
+        <div class="small">days</div>
+      </div>
+    </div>
+
+    <!-- CENTER -->
+    <div class="center">
+      <h1 class="title">Baking in progress...</h1>
+
+      <div class="oven" id="ovenClick">
+        <img id="ovenImage" class="oven-img" src="assets/image-removebg-preview (1).png">
+      </div>
+      <div class="custom-time">
+  <input type="number" id="minutes" placeholder="Min" min="1">
+  <input type="number" id="seconds" placeholder="Sec" min="0" max="59">
+  <button id="setTime">Set Time</button>
+</div>
+
+      <div class="timer">25:00</div>
+      <p class="status">Time to focus 💖</p>
+
+      <div class="buttons">
+        <button class="start">▶ Start</button>
+        <button class="pause">⏸ Pause</button>
+        <button class="reset">🔄 Reset</button>
+      </div>
+    </div>
+
+    <!-- RIGHT -->
+    <div class="panel right">
+      <div class="card">
+        <div class="icon">💗</div>
+        <h3>Motivation</h3>
+        <p id="quoteText"></p>
+      </div>
+
+      <div class="card" id="breakCard">
+    <div class="icon">☕</div>
+    <h3>Break Time</h3>
+    <p id="breakDisplay">5:00</p>
+</div>
+    </div>
+
+  </div>
+  <div class="bake-popup" id="bakePopup">
+
+  <div class="popup-box">
+
+    <h3>🍰 What do you want to bake?</h3>
+
+    <div class="popup-options">
+      <button onclick="chooseBake('cupcake')">🧁 Cupcake</button>
+      <button onclick="chooseBake('cake')">🎂 Cake</button>
+      <button onclick="chooseBake('cookie')">🍪 Cookie</button>
+    </div>
+
+  </div>
+
+</div>
+<div class="break-popup" id="breakPopup">
+  <div class="popup-box">
+    <h3>Set Break Time ☕</h3>
+    
+    <input type="number" id="breakMin" placeholder="Min">
+    <input type="number" id="breakSec" placeholder="Sec">
+
+    <button id="saveBreak">Save</button>
+  </div>
+</div>
+</div>
+<div class="goal-popup" id="goalPopup">
+  <div class="goal-box">
+    <h2>🎉 Yayyy!</h2>
+    <p>You completed your goal today 💖</p>
+    <button onclick="closeGoalPopup()">Okay 🧁</button>
+  </div>
+</div>
+<div class="mini-widget" id="miniWidget">
+  
+  <div class="mini-header drag-area">
+    <span>⏱ Timer</span>
+    <button id="closeMini" class="no-drag">✖</button>
+  </div>
+
+  <div class="mini-time" id="miniTime">25:00</div>
+
+  <div class="mini-controls no-drag">
+    <button id="miniStart">▶</button>
+    <button id="miniReset">⟳</button>
+  </div>
+
+</div>
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Account</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="overlay" id="overlay"></div>
+
+<div class="sidebar" id="sidebar">
+  <h2>🌸 Menu</h2>
+  <ul>
+    <li onclick="goTo('index.html')">🏠 Home</li>
+    <li onclick="goTo('dashboard.html')">📊 Dashboard</li>
+    <li onclick="goTo('account.html')">👤 Account</li>
+  </ul>
+</div>
+
+<div class="app">
+
+  <!-- TOPBAR -->
+  <div class="topbar">
+    <div class="left-section">
+      <span class="menu-btn" id="menuBtn">☰</span>
+    </div>
+    <div class="center-title">👤 Account</div>
+  </div>
+
+  <!-- FORM -->
+  <div class="account-container" id="formSection">
+
+    <div class="account-card">
+      <h2>🌸 Create Profile</h2>
+
+      <input id="name" placeholder="Name">
+      <input id="age" type="number" placeholder="Age">
+
+      <select id="gender">
+        <option value="">Select Gender</option>
+        <option>Female</option>
+        <option>Male</option>
+        <option>Other</option>
+      </select>
+
+      <input id="goal" type="number" placeholder="Daily Goal">
+
+      <button id="saveBtn">Save 💖</button>
+    </div>
+
+  </div>
+
+  <!-- PROFILE VIEW -->
+  <div class="account-container" id="profileSection" style="display:none;">
+
+    <div class="profile-card">
+<img id="pfp" class="pfp">
+      <h2 id="pName"></h2>
+      <p id="pAge"></p>
+      <p id="pGender"></p>
+      <p id="pGoal"></p>
+
+      <button id="editBtn">Edit ✨</button>
+    </div>
+
+  </div>
+<button class="reset-btn" onclick="resetAll()">Reset App</button>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
