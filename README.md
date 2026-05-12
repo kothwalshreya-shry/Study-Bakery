@@ -78,7 +78,11 @@ npm run build
 
 ## 🌸 Screenshots
 
-Add screenshots here later ✨
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/6290b867-be12-43f2-8623-f67ace13ed5e" />
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/87a75225-0020-4acf-9794-48acc2b5de62" />
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/c8a62139-06c3-4695-834d-7f65327aea17" />
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/16ea107b-9ff3-4dbd-af29-734632c9b767" />
+
 
 ---
 
